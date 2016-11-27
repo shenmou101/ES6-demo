@@ -15,3 +15,10 @@ function add(a,...arg) {    //...代表囊括后面所有参数的数组
 
 let res = add(1,3,4,5);
 console.log(res);
+
+//求最大值
+
+let arr = [3,42,12,51];
+/*let m = Math.max.apply(null,arr);*/
+let m = Math.max(...arr);
+console.log(m);
