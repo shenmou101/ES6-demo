@@ -2,8 +2,7 @@
  * Created by 51621 on 2016/12/19.
  */
 /*
-* set 是一个不重复的数组
-* map 的key只能是字符串或symbol
+* set 是一个不重复的类数组
 * */
 
 var obj = {a: 'a'};
@@ -32,3 +31,15 @@ for (let item of ents) {
 let set = new Set(['a','b','c']);
 let arr = [...set];
 console.log(arr);
+
+let arr2 = [1,2,3,4,5,2,4];
+// 数组去重
+// 1.把数组放到set里
+// 2.set会自动去重
+// 3.把set放回数组里
+
+let set2 = new Set(arr2);
+
+arr2 = Array.from(set2);
+//或者 arr2 = Array.from(new Set(arr2))
+console.log(arr2);
